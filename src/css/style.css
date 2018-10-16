@@ -1,0 +1,204 @@
+/*上面是修改所有CSS相关的默认值*/
+*{margin: 0; padding: 0;}
+*{box-sizing: border-box;}
+*::before{box-sizing: border-box;}
+*::after{box-sizing: border-box;}
+a{color: inherit; text-decoration: none;}/*颜色继承 清楚下划线*/
+ul,ol{list-style: none;}/*清楚列表样式*/
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+
+/*正式CSS*/
+body{font: 14px/1.5 Helvetica,sans-serif;}/*字体样式*/
+.icon{
+    width: 1em; height: 1em;
+    vertical-align: -0.15em; /*垂直对齐*/
+    fill: currentColor;
+    overflow: hidden;
+}
+body{
+    font-size: 15px;
+    background: white;
+}
+.sectionTitle{
+    border-left: 2px solid #d43c33;
+    font-size: 17px;
+    line-height: 1;
+    padding-left: 8px;
+    margin: 20px 0 8px;
+}
+.pageTabsNavbar.sticky{
+    transition: all linear 0.2s;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+section.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d43c33;
+    padding: 17px 10px;
+}
+section.topbar .logo > svg{
+    width: 142px;
+    height: 25px;
+    vertical-align: top;
+}
+section.topbar > a{
+    position: relative;
+    display: inline-block;
+    padding: 5px 11px;
+    line-height: 20px;
+    color: white;
+}
+section.topbar > a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 50px;
+    /*可以使用下面代码 代替 width 100%   height 100%
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: 0 0; */
+}
+/* tabs-nav */
+.tabs-nav{
+    display: flex;
+    border-bottom: 1px solid #cccccc;
+}
+.tabs-nav > li{
+    width: 33.33333%;
+    text-align: center;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.tabs-nav > li >.text{
+    padding: 10px 5px;
+    position: relative;
+    top: 1px;
+}
+.tabs-nav > li.active{
+    color: #d43c33;
+}
+.tabs-nav > li.active > .text::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    background: #d43c33;
+    bottom: 1px;
+    width: 100%;
+    height: 2px;
+}
+.tab-content{
+    margin-top: 10px;
+}
+.tab-content > li{
+    display: none;
+}
+.tab-content > li.active{
+    display: block;
+}
+.noCollapse::before{
+    content: '';
+    display: table;
+}
+.noCollapse::after{
+    content: '';
+    display: table;/*目前不清楚这个before after 是做什么*/
+}
+section.playlists > ol.songs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 13px;
+}
+section.playlists > ol.songs > li{
+    width: 32.8%;
+    margin: 8px 0;
+}
+section.playlists > ol.songs > li p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: ;/*看文档 这段p的css 删除也是一样*/
+    overflow: hidden;
+    line-height: 20px;
+    height: 36px;
+    padding: 0 6px;
+}
+section.playlists > ol.songs > li img{
+    width: 100%;
+}
+
+/*section.songs*/
+section.songs > .list{
+    margin-top: 18px;
+}
+section.songs > .list > li > h3{
+    font-size: 17px;
+}
+section.songs > .list > li > p{
+    font-size: 12px;
+    color: #888;
+}
+section.songs > .list > li{
+    position: relative;
+    margin-left: 10px;
+    padding-bottom: 6px;
+    padding-top: 5px;
+    border-bottom: 1px solid #e2e2e3;
+}
+section.songs > .list > li >.playButton{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+section.songs > .list .icon-playbutton{
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    fill: #AAA;
+}
+section.songs > .list .icon-sq{
+    fill: #FE672E;
+}
+section.art{
+    padding-top: 38px;
+    padding-bottom: 18px;
+    background: transparent url(//i.loli.net/2017/08/25/599f862b9c98d.png) no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+section.art svg{
+    width: 230px;
+    height: 44px;
+}
+section.art .link-wrapper > a{
+    display: inline-block;
+    border: 1px solid;
+    line-height: 40px;
+    font-size: 16px;
+    padding: 0 19px;
+    border-radius: 20px;
+    color: #d43c33;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+section.art .copyright{
+    font-size: 12px;
+    color: #888;
+    transform: scale(0.75);/*按比例放大缩小*/
+}

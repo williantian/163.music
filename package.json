@@ -1,0 +1,26 @@
+{
+  "name": "163-music",
+  "version": "1.0.0",
+  "main": "moxie.js",
+  "dependencies": {
+    "leancloud-storage": "^3.10.0",
+    "qiniu": "^7.2.1",
+    "qiniu-js": "^1.0.22"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williantian/163.music.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williantian/163.music/issues"
+  },
+  "homepage": "https://github.com/williantian/163.music#readme",
+  "description": ""
+}
